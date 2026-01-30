@@ -3,7 +3,7 @@
 This project is a **Process Mining** application designed to analyze the **BPI Challenge 2013** dataset (Volvo IT Incident Management). It provides tools for data exploration, process discovery, and AI-driven insights using **Streamlit**, **PM4Py**, and **OpenAI**.
 
 ## 📂 Dataset
-The dataset used in this project is the **BPI Challenge 2013** (closed problems).
+The dataset used in this project is the **BPI Challenge 2013** (closed problems).<br>
 🔗 **Download here:** [4TU.ResearchData](https://data.4tu.nl/articles/_/12714476/1)
 
 ## ✨ Features
@@ -21,41 +21,39 @@ The dataset used in this project is the **BPI Challenge 2013** (closed problems)
    cd FormalMethods
    ```
 
-2. **Create and activate a virtual environment** (optional but recommended):
-   ```bash
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # Linux/Mac
-   source .venv/bin/activate
-   
+2. **Create and activate a virtual environment** (optional but recommended).
+
 3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Environment Setup**:
-   Create a `.env` file in the root directory and add your OpenAI API Key:
-   
+   Create a `.env` file in the root directory and add your OpenAI API Key.
+   ```
+   OPENAI_API_KEY=YOUR_KEY_HERE
    ```
 
 ## 🖥️ Usage
-
-### Run the Dashboard
-To start the interactive web application:
-```bash
-streamlit run dashboard.py
-```
-
-### Run Basic Analysis
-For a quick console-based analysis and DFG generation:
+### Run basic data exploration
 ```bash
 python main.py
 ```
 
-### Process Discovery & Reporting
-- **Generate Process Models**: Run `python discovery.py` to generate Petri net images (`model_*.png`) and metrics (`final_results.csv`).
-- **Generate AI Business Report**: Run `python reasoning.py` to create `ai_report.md` with performance insights.
+### Run process discovery and generate metrics
+```bash
+python discovery.py
+```
+
+### Generate AI-powered analysis report
+```bash
+python reasoning.py
+```
+
+### Launch interactive dashboard
+```bash
+streamlit run dashboard.py
+```
 
 ## 📁 Project Structure
 - `dashboard.py`: Main Streamlit application.
