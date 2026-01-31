@@ -210,7 +210,8 @@ with tab3:
             position: fixed;
             bottom: 50px;
             left: -9;
-            width: 83%;
+            width: 70%;
+            margin-right: 5vw;
             padding: 10px;
             z-index: 20;
         }
