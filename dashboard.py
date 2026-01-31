@@ -239,11 +239,17 @@ with tab3:
                 else:
                     avg_events_case = max_events_case = "N/A"
                 
+                avg_events_case_str = (
+                    f"{avg_events_case:.2f}"
+                    if isinstance(avg_events_case, float)
+                    else str(avg_events_case)
+                )
+                
                 context = f"""Dataset: BPI Challenge 2013 (Volvo IT Incident Management).
                 Total Cases: {cases}. Total Events: {events}.
                 Activities: {top_acts}.
                 Top Resources: {top_resources}.
-                Avg Events/Case: {avg_events_case:.2f if isinstance(avg_events_case, float) else avg_events_case}. Max Events in a Case: {max_events_case}.
+                Avg Events/Case: {avg_events_case_str}. Max Events in a Case: {max_events_case}.
                 Note: Look for anomalies like resource bottlenecks, excessive loops, or unusual patterns."""
                 
                 full_prompt = f"Context: {context}\nUser Question: {prompt}\nAnswer as a concise Business Analyst. If the question is about anomalies, highlight specific issues found in the data."
